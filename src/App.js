@@ -20,10 +20,10 @@ function App() {
     return passwordsSaves;
   }
 
-  async function savePassoword(newLink) {
+  async function savePassoword(pass) {
     let passwords = await getStorage('password');
 
-    passwords.push(newLink);
+    passwords.push(pass);
     await localStorage.setItem('password', JSON.stringify(passwords));
   }
   useEffect(() => {
